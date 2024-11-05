@@ -1,0 +1,9 @@
+// assets/scss/base/_index.scss
+
+// Forward variables and mixins
+@forward 'variables';
+@forward 'mixins';
+
+// Import reset and typography
+@use 'reset';
+@use 'typography';

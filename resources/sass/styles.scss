@@ -1,5 +1,11 @@
-@forward "abstracts/_abstracts-dir";
-@forward "base/_base-dir";
-@forward "components/_components-dir";
-@forward "layouts/_layouts-dir";
-@forward "vendor/_vendor-dir";
+// assets/scss/main.scss
+
+// Import base styles, including variables, mixins, reset, and typography
+@use 'base';
+
+// Layout
+@use 'layout/header';
+@use 'layout/footer';
+
+// Components
+@use 'components/buttons';
