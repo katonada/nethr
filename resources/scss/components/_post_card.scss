@@ -1,0 +1,120 @@
+.post-card {
+    cursor: pointer;
+
+    &__image-wrapper {
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: #f3f4f6;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__image-link {
+        position: relative;
+        display: block;
+        aspect-ratio: 16 / 9;
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+    }
+
+    &__content {
+        margin-top: 16px;
+    }
+
+    &__categories {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+    }
+
+    &__category-link {
+        margin-top: 12px;
+        margin-right: 12px;
+    }
+
+    &__category-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-color: #e0e7ff;
+        color: #4338ca;
+        font-weight: 500;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__title {
+        margin-top: 12px;
+        color: #1f2937;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    &__title-highlight {
+        background-image: linear-gradient(to right, #6ee7b7, #d1fae5);
+        background-position: left bottom;
+        background-size: 0 10px;
+        background-repeat: no-repeat;
+        transition: background-size 0.5s;
+
+        &:hover, .post-card:hover & {
+            background-size: 100% 3px;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-top: 12px;
+        color: #6b7280;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+    }
+
+    &__author-avatar {
+        position: relative;
+        overflow: hidden;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    &__author-image {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__author-name,
+    &__date,
+    &__read-time {
+        font-size: 0.875rem;
+    }
+
+    &__dot {
+        color: #d1d5db;
+        font-size: 0.75rem;
+    }
+}

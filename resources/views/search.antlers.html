@@ -1,8 +1,8 @@
-<div class="layout layout--search">
+<div class="layout layout--padded">
     {{ partial:components/heading size="h2" label="Results for: '{get:q}'" center="true" }}
     {{ search:results as="results" }}
     {{ if results }}
-    <ul class="layout__grid layout__grid--search">
+    <ul class="layout__grid layout__grid--responsive">
         {{ results }}
         <li>
             {{ partial:components/post_card }}

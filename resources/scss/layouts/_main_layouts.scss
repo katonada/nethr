@@ -6,26 +6,28 @@
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
 
-    &--search {
-        padding-top: 2rem; // equivalent to py-8
-        padding-bottom: 2rem;
+    // Unified padding for various layouts
+    &--padded {
+        padding-top: 32px; // equivalent to 2rem
+        padding-bottom: 32px;
 
         @media (width >= 768px) {
-            padding-top: 3rem; // md:py-12 equivalent
-            padding-bottom: 3rem;
+            padding-top: 48px; // equivalent to 3rem
+            padding-bottom: 48px;
         }
     }
 
     &__grid {
         display: grid;
-        gap: 3rem; // gap-12 equivalent
+        gap: 48px; // equivalent to 3rem
 
-        &--search {
-            margin-top: 2rem; // mt-8 equivalent
+        // Unified grid layout for search and category
+        &--responsive {
+            margin-top: 32px; // equivalent to 2rem
 
             @media (width >= 768px) {
                 grid-template-columns: repeat(2, 1fr); // md:grid-cols-2
-                margin-top: 3rem; // md:mt-12 equivalent
+                margin-top: 48px; // equivalent to 3rem
             }
 
             @media (width >= 1024px) {
@@ -34,15 +36,48 @@
         }
     }
 
-    &__message {
+    &__message--no-results {
+        margin-top: 32px;
         text-align: center;
 
-        &--no-results {
-            margin-top: 2rem; // mt-8 equivalent
-
-            @media (width >= 768px) {
-                margin-top: 3rem; // md:mt-12 equivalent
-            }
+        @media (width >= 768px) {
+            margin-top: 48px;
         }
+    }
+
+    &__categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 48px;
+    }
+
+    &__category-item {
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__category-link {
+        padding: 8px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        color: #6b7280;
+        font-weight: 500;
+        font-size: 0.875rem;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            border-color: transparent;
+            background-color: #e0e7ff;
+            color: #3b82f6;
+        }
+    }
+
+    &__no-categories {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 48px;
     }
 }
