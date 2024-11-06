@@ -1,0 +1,12 @@
+
+.navigation {
+    display: flex;
+    gap: 1rem; // space-x-4
+
+    &__link {
+        font-size: 0.875rem; // text-sm
+        &:hover {
+            color: #a0aec0; // hover:text-gray-400
+        }
+    }
+}

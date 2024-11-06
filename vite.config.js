@@ -6,17 +6,15 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/site.css',
-                'resources/js/site.js',
+                'resources/css/site.css', // main CSS entry
+                'resources/js/site.js',   // main JS entry
 
-                // Control Panel assets
-                // https://statamic.dev/extending/control-panel#adding-css-and-js-assets
+                // Control Panel assets (if needed)
                 // 'resources/css/cp.css',
                 // 'resources/js/cp.js',
             ],
             refresh: true,
         }),
-        // vue2(),
     ],
     resolve: {
         alias: {
@@ -26,12 +24,18 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: `@use "@scss/base/index" as *;`
+                additionalData: `@use "@scss/_styles" as *;`
             }
+        },
+        postcss: {
+            plugins: [
+                require('tailwindcss'),   // Add Tailwind CSS plugin
+                require('autoprefixer'),  // Add Autoprefixer for vendor prefixes
+            ]
         }
     },
     build: {
-        outDir: 'public/assets', // Ensuring assets are bundled in Statamic’s public folder
+        outDir: 'public/assets', // Output path for bundled assets
         emptyOutDir: true,
     }
 });
