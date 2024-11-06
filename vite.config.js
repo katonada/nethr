@@ -6,27 +6,24 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/site.css', // main CSS entry
-                'resources/js/site.js',   // main JS entry
-
-                // Control Panel assets (if needed)
-                // 'resources/css/cp.css',
-                // 'resources/js/cp.js',
+                'resources/css/site.css',   // Main CSS file
+                'resources/js/site.js',     // Main JS file
+                'resources/scss/styles.scss'  // Add the SCSS entry here
             ],
             refresh: true,
         }),
     ],
     resolve: {
         alias: {
-            '@scss': path.resolve(__dirname, './assets/scss'),
+            '@scss': path.resolve(__dirname, './resources/scss'),
         }
     },
     css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: `@use "@scss/_styles" as *;`
-            }
-        },
+        // preprocessorOptions: {
+        //     scss: {
+        //         additionalData: `@use "@scss/styles" as *;`
+        //     }
+        // },
         postcss: {
             plugins: [
                 require('tailwindcss'),   // Add Tailwind CSS plugin
@@ -35,7 +32,7 @@ export default defineConfig({
         }
     },
     build: {
-        outDir: 'public/assets', // Output path for bundled assets
+        outDir: 'public/build/assets', // Output path for bundled assets
         emptyOutDir: true,
     }
 });
