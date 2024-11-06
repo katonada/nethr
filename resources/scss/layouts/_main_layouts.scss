@@ -1,0 +1,48 @@
+/* resources/scss/layouts/_main_layouts.scss */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+
+    &--search {
+        padding-top: 2rem; // equivalent to py-8
+        padding-bottom: 2rem;
+
+        @media (width >= 768px) {
+            padding-top: 3rem; // md:py-12 equivalent
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 3rem; // gap-12 equivalent
+
+        &--search {
+            margin-top: 2rem; // mt-8 equivalent
+
+            @media (width >= 768px) {
+                grid-template-columns: repeat(2, 1fr); // md:grid-cols-2
+                margin-top: 3rem; // md:mt-12 equivalent
+            }
+
+            @media (width >= 1024px) {
+                grid-template-columns: repeat(3, 1fr); // lg:grid-cols-3
+            }
+        }
+    }
+
+    &__message {
+        text-align: center;
+
+        &--no-results {
+            margin-top: 2rem; // mt-8 equivalent
+
+            @media (width >= 768px) {
+                margin-top: 3rem; // md:mt-12 equivalent
+            }
+        }
+    }
+}

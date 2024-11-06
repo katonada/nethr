@@ -4,10 +4,14 @@
 @use 'base/reset';
 @use 'base/typography';
 
+// Components
+@use 'components/button';
+
 // Layout
+@use 'layouts/main_layouts';
 @use 'layouts/header';
 @use 'layouts/footer';
 @use 'layouts/navigation';
 
-// Components
-@use 'components/button';
+// Pages
+@use 'pages/home';

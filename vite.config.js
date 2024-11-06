@@ -6,9 +6,9 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/site.css',   // Main CSS file
-                'resources/js/site.js',     // Main JS file
-                'resources/scss/styles.scss'  // Add the SCSS entry here
+                'resources/css/site.css',
+                'resources/js/site.js',
+                'resources/scss/styles.scss'
             ],
             refresh: true,
         }),
@@ -19,20 +19,23 @@ export default defineConfig({
         }
     },
     css: {
-        // preprocessorOptions: {
-        //     scss: {
-        //         additionalData: `@use "@scss/styles" as *;`
-        //     }
-        // },
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                    @use "@scss/base/_variables.scss" as *;
+                    @use "@scss/base/_mixins.scss" as *;
+                `
+            }
+        },
         postcss: {
             plugins: [
-                require('tailwindcss'),   // Add Tailwind CSS plugin
-                require('autoprefixer'),  // Add Autoprefixer for vendor prefixes
+                require('tailwindcss'),
+                require('autoprefixer'),
             ]
         }
     },
     build: {
-        outDir: 'public/build/assets', // Output path for bundled assets
+        outDir: 'public/build/',
         emptyOutDir: true,
     }
 });

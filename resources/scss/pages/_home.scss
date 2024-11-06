@@ -1,0 +1,10 @@
+.home__container {
+    max-width: 1200px;         // Equivalent to `container` in Tailwind
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 2rem;         // pt-8 equivalent
+
+    @media (width >= 768px) {
+        padding-top: 3rem;     // md:pt-12 equivalent
+    }
+}
