@@ -27,6 +27,27 @@ $categories: (
   --container-width: 90%;
   --container-max-width: 1200px;
 
+  /* New Article-Specific Variables */
+  --article-text-color: #333;
+  --article-bg-color: #f9f9f9;
+  --article-title-color: #222;
+  --article-meta-color: #666;
+
+  /* Category Colors */
+  --category-bg-color: #fafafa;
+  --category-title-color: #222;
+  --category-description-color: #666;
+
+  /* Term-Specific Colors */
+  --term-bg-color: #f5f5f5;
+  --term-title-color: #333;
+  --term-article-link-color: #0059B2;
+
+  /* Typography & Spacing */
+  --category-title-size: 1.75rem;
+  --term-title-size: 1.5rem;
+  --term-spacing: 1.5rem;
+
 
 /* Generate CSS Variables for Each Category */
   @each $name, $props in $categories {

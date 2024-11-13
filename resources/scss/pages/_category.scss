@@ -1,0 +1,47 @@
+/* _category.scss */
+
+.categories {
+  padding: 2rem;
+  background-color: var(--category-bg-color);
+
+  .title {
+    margin-bottom: 1rem;
+    color: var(--category-title-color);
+    font-size: var(--category-title-size);
+    text-align: center;
+  }
+
+  .description {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--category-description-color);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .category-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--category-bg-color);
+    color: var(--category-title-color);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--term-bg-color);
+    }
+
+    a {
+      color: inherit;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}

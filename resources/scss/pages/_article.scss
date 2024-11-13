@@ -1,19 +1,19 @@
-/* _article.scss */
-
 .article {
   max-width: 800px;
   margin: 2rem auto;
-  color: var(--primary-color);
+  background-color: var(--article-bg-color);
+  color: var(--article-text-color);
 
   .title {
     margin-bottom: 1rem;
+    color: var(--article-title-color);
     font-weight: bold;
-    font-size: var(--font-size-large);
+    font-size: clamp(1.5rem, 2vw + 1rem, var(--font-size-large));
   }
 
   .meta {
     margin-bottom: 2rem;
-    color: var(--secondary-color);
+    color: var(--article-meta-color);
     font-size: var(--font-size-small);
 
     .author {
@@ -26,18 +26,20 @@
   }
 
   .content {
-    color: var(--text-color);
+    color: var(--article-text-color);
     font-size: var(--font-size-base);
     line-height: 1.6;
 
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      padding-inline: 1rem;
     }
 
     img {
       max-width: 100%;
       height: auto;
       margin: 1.5rem 0;
+      padding: 1rem;
     }
   }
 }

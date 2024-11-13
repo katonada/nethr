@@ -1,0 +1,52 @@
+/* _term.scss */
+
+.term {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--term-bg-color);
+
+  .term-title {
+    margin-bottom: 1rem;
+    color: var(--term-title-color);
+    font-size: var(--term-title-size);
+    text-align: center;
+  }
+
+  .term-description {
+    margin-bottom: 2rem;
+    color: var(--category-description-color);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--term-spacing);
+
+    .article-item {
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .article-title {
+        margin-bottom: 0.5rem;
+        color: var(--term-article-link-color);
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      .article-excerpt {
+        color: var(--category-description-color);
+        font-size: 1rem;
+      }
+    }
+  }
+}

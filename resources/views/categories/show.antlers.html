@@ -1,13 +1,27 @@
 {{ extends layout="layouts.default" }}
 
-<h1>{{ title }}</h1>
-<p>{{ description }}</p>
+{{ section:main_content }}
+<div class="term">
+    <h1 class="term-title">{{ title }}</h1>
+    <p class="term-description">{{ description ?? 'Browse articles in this category' }}</p>
 
-<h2>Articles in "{{ title }}"</h2>
-{{ collection:posts taxonomy:categories="{slug}" }}
-<article>
-    <h3><a href="{{ url }}">{{ title }}</a></h3>
-    <img src="{{ featured_image }}" alt="{{ title }}" />
-    {{# <p>{{ excerpt ?? content | truncate:150 }}</p> #}}
-</article>
-{{ /collection:posts }}
+    <div class="articles-list">
+        {{ collection:posts taxonomy:categories="{slug}" }}
+        <div class="article-item">
+            <h2 class="article-title"><a href="{{ url }}">{{ title }}</a></h2>
+            <p class="article-excerpt">
+                {{ if excerpt }}
+                {{ excerpt | truncate:150 }}
+                {{ else }}
+                {{ if bard_field is string }}
+                {{ bard_field | truncate:150 }}
+                {{ else }}
+                {{ bard_field[0].content[0].text | truncate:150 }}
+                {{ /if }}
+                {{ /if }}
+            </p>
+        </div>
+        {{ /collection:posts }}
+    </div>
+</div>
+{{ /section:main_content }}
