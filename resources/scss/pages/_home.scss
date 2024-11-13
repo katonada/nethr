@@ -1,0 +1,39 @@
+/* _home.scss */
+
+.home {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+
+  .hero {
+    margin-bottom: 2rem;
+    padding: 3rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: var(--font-size-large);
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: var(--font-size-base);
+    }
+  }
+
+  .featured-section {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    .card {
+      flex: 1;
+      padding: 1rem;
+      background-color: var(--secondary-color);
+      box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    }
+  }
+}

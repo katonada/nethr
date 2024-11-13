@@ -1,0 +1,32 @@
+/* _button.scss */
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &--primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--primary-color) 90%, black);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--primary-color) 90%, white);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

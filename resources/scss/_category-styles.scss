@@ -1,0 +1,34 @@
+/* Categories Map */
+$categories: (
+  "danas": (color: #D90000, background: #FFE5E5),
+  "izbori_2024": (color: #A30000, background: #FFECEC),
+  "sport": (color: #0059B2, background: #E5F0FF),
+  "hot": (color: #B74497, background: #FFE5F2),
+  "magazin": (color: #719427, background: #F0FFE5),
+  "webcafe": (color: #DBA418, background: #FFF7E5),
+  "video": (color: #D90000, background: #FFE5E5),
+  "zena": (color: #BF2175, background: #FFE5F2),
+  "kultura": (color: #FFA500, background: #FFF5E5)
+);
+
+
+/* Base Variables */
+:root {
+  /* Colors */
+  --primary-color: #333;
+  --secondary-color: #222;
+  --text-color: #fff;
+
+  /* Font Sizes */
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-small: 0.875rem;
+
+  /* Container Widths */
+  --container-width: 90%;
+  --container-max-width: 1200px;
+  @each $name, $props in $categories {
+    --color-#{$name}: map.get($props, color);
+    --background-#{$name}: map.get($props, background);
+  }
+}

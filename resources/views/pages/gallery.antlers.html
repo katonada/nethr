@@ -1,0 +1,15 @@
+{{ extends layout="layouts.default" }}
+
+{{ section:main_content }}
+<div class="gallery">
+    <h1>Photo Gallery</h1>
+    <div class="grid">
+        {{ partial:gallery-slider images=[
+        { url: "/path/to/image1.jpg", alt: "Image 1" },
+        { url: "/path/to/image2.jpg", alt: "Image 2" },
+        { url: "/path/to/image3.jpg", alt: "Image 3" },
+        { url: "/path/to/image4.jpg", alt: "Image 4" }
+        ] }}
+    </div>
+</div>
+{{ /section:main_content }}

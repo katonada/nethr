@@ -1,0 +1,16 @@
+/* _header.scss */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+
+  .logo a {
+    color: var(--text-color);
+    font-size: var(--font-size-large);
+    text-decoration: none;
+  }
+}

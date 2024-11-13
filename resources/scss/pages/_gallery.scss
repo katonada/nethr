@@ -1,0 +1,27 @@
+/* _gallery.scss */
+
+.gallery {
+  padding: 2rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid-item {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

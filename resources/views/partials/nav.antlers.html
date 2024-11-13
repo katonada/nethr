@@ -1,0 +1,18 @@
+<nav class="nav">
+    <ul class="nav-list">
+        {{ nav:main_navigation }}
+        <li class="nav-item {{ if is_active }}nav-item--active{{ /if }}">
+            <a href="{{ url }}" class="nav-link">{{ title }}</a>
+            {{ if children }}
+            <ul class="subnav-list">
+                {{ children }}
+                <li class="subnav-item">
+                    <a href="{{ url }}" class="subnav-link">{{ title }}</a>
+                </li>
+                {{ /children }}
+            </ul>
+            {{ /if }}
+        </li>
+        {{ /nav:main_navigation }}
+    </ul>
+</nav>

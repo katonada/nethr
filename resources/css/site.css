@@ -12,12 +12,15 @@
 .prose code::before {
     content: none !important;
 }
+
 .prose code::after {
     content: none !important;
 }
+
 .prose blockquote> ::before {
     content: none !important;
 }
+
 .prose blockquote> ::after {
     content: none !important;
 }

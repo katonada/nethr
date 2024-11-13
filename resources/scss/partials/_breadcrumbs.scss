@@ -1,0 +1,17 @@
+/* _breadcrumbs.scss */
+
+.breadcrumbs {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-size: var(--font-size-small);
+
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

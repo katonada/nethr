@@ -1,0 +1,226 @@
+tree:
+  -
+    id: 1f85452c-cb76-40c1-8e14-d61b360eef0a
+    title: Home
+    url: /
+    data:
+      href: /danas
+      color: '#a30000'
+      sub_navigation:
+        -
+          id: m37itqjc
+          title: Vijesti
+          href: /danas/vijesti
+          type: subnav
+          enabled: true
+  -
+    id: 7666eb96-a384-4e7f-bbe5-0c829b9b5075
+    title: Danas
+    url: /danas
+    data:
+      color: '#D90000'
+    children:
+      -
+        id: 4668716b-7aa0-467a-bfb0-1e6655f20948
+        title: Vijesti
+        url: /danas/vijesti
+      -
+        id: 919ee491-5566-4422-a945-d4cb52d6713b
+        title: Svijet
+        url: /danas/svijet
+      -
+        id: 5e5c8d1d-9f10-4eaf-b9c4-e3c4b0b15612
+        title: 'Crna kronika'
+        url: /danas/crna-kronika
+      -
+        id: 892cd5f3-b8a5-43d7-b9d2-5f4178c5b6c8
+        title: 'RTL Danas'
+        url: /danas/rtl-danas
+      -
+        id: 7b8a0e32-6f1d-42b7-b4e2-7fb890e4c207
+        title: Auto
+        url: 'https://net.hr/auto'
+      -
+        id: a1b3e7f7-6dd2-4bdf-bba9-3c3bbf1b22e9
+        title: 'RTL Direkt'
+        url: /danas/rtl-direkt
+      -
+        id: b0d8b25c-06f5-4b6c-98e6-43e1d5698424
+        title: 'Stanje nacije'
+        url: /danas/stanje-nacije
+      -
+        id: f7e5d5a6-7c5b-44e9-a12f-8c1b2b4b983e
+        title: 'Dosje Jarak'
+        url: 'https://dosjejarak.rtl.hr/'
+  -
+    id: 8d7550e2-05b4-4c19-9d2a-93e37b07e6ff
+    title: Sport
+    url: /sport
+    data:
+      color: '#0059B2'
+    children:
+      -
+        id: e2f54f8f-9b68-45e8-aad5-207bb56472c9
+        title: Nogomet
+        url: /sport/nogomet
+      -
+        id: c94f06b2-50b1-4b92-b0a1-49092366f832
+        title: Rukomet
+        url: /sport/rukomet
+      -
+        id: f0e42dfc-8a0e-4c5c-9b1b-9b452fa0b41f
+        title: 'Klub boraca'
+        url: /sport/klub-boraca
+      -
+        id: 3b5c4f6e-2ff7-45a4-8313-f7d5169e82e3
+        title: 'Na rubu sporta'
+        url: /sport/na-rubu-sporta
+      -
+        id: 6c52af6d-d787-45f5-846e-7f284252a0d8
+        title: Košarka
+        url: /sport/kosarka
+      -
+        id: 0b5e8e5d-6f56-4f29-94f1-456f6d925d71
+        title: Tenis
+        url: /sport/tenis
+      -
+        id: 90b5d9d3-b3b5-4784-b07f-2c4c5a52a8fb
+        title: 'Ostali sportovi'
+        url: /sport/ostali-sportovi
+  -
+    id: 1e3a5e4e-3a21-45fb-abc6-87f4d230f7a9
+    title: Hot
+    url: /hot
+    data:
+      color: '#B74497'
+    children:
+      -
+        id: e3f92c3b-4c15-4958-872f-6d4a084bf593
+        title: Zvijezde
+        url: /hot/zvijezde
+      -
+        id: e7dfe3d3-b5d2-4b7f-8d7c-3e6c48d41721
+        title: Film
+        url: /hot/film
+      -
+        id: 3c88eefa-2a3c-4a97-bf1b-f8e38a2c9f26
+        title: Glazba
+        url: /hot/glazba
+      -
+        id: 11d35f26-cde2-44f7-a7af-9c8e548d4f65
+        title: Paparazzi
+        url: /hot/paparazzi
+      -
+        id: b7640e5d-c2c1-4d32-88d1-c8e62de5742a
+        title: TV
+        url: /hot/tv
+      -
+        id: 5c7b0f17-432d-4c8a-8e4d-d8c4a6819a10
+        title: 'San snova'
+        url: /hot/san-snova
+      -
+        id: 9cf14d7c-98d5-4b0d-a538-dedf573c8c1c
+        title: Superstar
+        url: /hot/superstar
+  -
+    id: 4f839ef8-2124-4e13-b39e-27d1f90c7bde
+    title: Magazin
+    url: /magazin
+    data:
+      color: '#719427'
+    children:
+      -
+        id: c1df6d4d-df76-4666-9bfa-4ed3f8e3a5f2
+        title: 'Brak&veze'
+        url: /magazin/brak-veze
+      -
+        id: 9ab0f5a6-dab8-4cb8-8df4-212f49e17d61
+        title: 'Dom&vrt'
+        url: /magazin/dom-vrt
+      -
+        id: 1efc11f5-4a8f-4f8c-b8f9-c9c7d452937a
+        title: 'Kuhinja i recepti'
+        url: /magazin/kuhinja-i-recepti
+      -
+        id: 1275d7c9-0e49-46e8-9248-6b674b63dfe8
+        title: Ljepota
+        url: /magazin/ljepota
+      -
+        id: 6e9e2f4a-d4f4-45f2-9e56-5e3b4d10d54e
+        title: Ljubimci
+        url: /magazin/ljubimci
+      -
+        id: e5c6f1e7-e5a7-4a8a-bf07-fb1e24e24856
+        title: Moda
+        url: /magazin/moda
+      -
+        id: 873df6e6-dbf1-4f38-83d7-c4b1d33a67bf
+        title: Putovanja
+        url: /magazin/putovanja
+      -
+        id: 6e4c3e3d-fd6a-499e-876e-7c3a3b1f7b7c
+        title: Roditeljstvo
+        url: /magazin/roditeljstvo
+      -
+        id: 3bf33b69-95b5-414f-96e4-c9277d7a1b21
+        title: Zdravlje
+        url: /magazin/zdravlje
+      -
+        id: 8cd35b1f-efd6-4144-bc63-e85d4d59fa5b
+        title: 'Životne ispovijesti'
+        url: /magazin/zivotne-ispovijesti
+  -
+    id: e4f46f5a-e70b-4e2c-bfed-4c50e6fbe9e2
+    title: Webcafe
+    url: /webcafe
+    data:
+      color: '#DBA418'
+    children:
+      -
+        id: 4fe3759c-0e0d-46f2-8fe8-83d3bfb62329
+        title: Astronet
+        url: /webcafe/astronet
+      -
+        id: 51f43b62-0cb6-4b6f-8536-99d29e2c08f2
+        title: 'Cura dana'
+        url: /webcafe/cura-dana
+      -
+        id: 6e32fcf3-96c8-426d-a1f4-351cba028ee4
+        title: 'Dnevni horoskop'
+        url: /webcafe/dnevni-horoskop
+      -
+        id: 5f53ce4f-3e4e-4b4b-b8bc-451c527e9a2c
+        title: Komentar
+        url: /webcafe/komentar
+      -
+        id: 8d42ff2b-92d2-4a9b-9a56-f34d4fd18d45
+        title: Overkloking
+        url: /webcafe/overkloking
+      -
+        id: b1936e2e-4e7b-4f61-98e6-7c6c1fb6d46a
+        title: 'Planet X'
+        url: /webcafe/planet-x
+      -
+        id: 6c1fe4d3-09bb-4de6-b7c5-3f3fe4cdb467
+        title: Svaštara
+        url: /webcafe/svastara
+      -
+        id: c6d2ecf3-9e6a-4f5c-98fe-8a2d456d9e61
+        title: 'Vic dana'
+        url: /webcafe/vic-dana
+      -
+        id: c43e34b6-e84d-4c8c-832d-cd3e4d7f23e9
+        title: Kvizovi
+        url: /webcafe/kvizovi
+  -
+    id: 1a3d5e4e-5a67-4989-b6c1-ef5c8d4f9e8a
+    title: Video
+    url: /video
+    data:
+      color: '#D90000'
+  -
+    id: 3e2c1f7d-0b75-4f29-bf1c-dfe1b4e3f871
+    title: Žena
+    url: 'https://zena.net.hr/'
+    data:
+      color: '#BF2175'

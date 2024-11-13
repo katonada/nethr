@@ -3,8 +3,8 @@ id: home
 blueprint: pages
 title: Home
 template: home
-updated_by: 5019d32a-932e-4e80-9d30-b60b20e24e87
-updated_at: 1688299523
+updated_by: 718f20f4-e54d-45dc-8b1d-e62ddc6e87b5
+updated_at: 1731327665
 blocks:
   -
     id: ljj7lhk3
@@ -20,6 +20,7 @@ blocks:
     type: featured_posts
     enabled: true
 show_title: false
+template_field: home
 ---
 ## Welcome to your brand new Statamic site!
 

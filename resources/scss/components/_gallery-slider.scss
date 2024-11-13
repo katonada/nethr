@@ -1,0 +1,29 @@
+/* _gallery-slider.scss */
+
+.gallery-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+
+  .slide {
+    flex: 0 0 auto;
+    overflow: hidden;
+    width: 200px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    transition: transform 0.3s ease;
+    scroll-snap-align: center;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

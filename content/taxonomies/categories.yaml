@@ -2,5 +2,6 @@ title: Categories
 preview_targets:
   -
     label: Term
-    url: '{permalink}'
+    url: '/categories/{slug}'
     refresh: true
+layout: layout

@@ -1,19 +1,18 @@
-<div class="container py-8 md:py-12">
-    <div class="max-w-3xl mx-auto space-y-6">
-        {{ partial:partials/post_categories }}
-        {{ partial:components/heading size="h2" :label="title" center="true" }}
-        {{ partial:partials/author post_show="true" }}
-    </div>
+{{ extends layout="layouts.default" }}
 
-    {{# Featured Image #}}
-    <div class="relative z-0 max-w-6xl mx-auto my-8 overflow-hidden rounded-lg md:my-12 aspect-video">
-        <img src="{{ featured_image }}" alt="{{ alt ?? title }}" class="object-cover"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent">
+{{ section:main_content }}
+<div class="article">
+    <h1 class="title">Understanding the Future of Technology</h1>
+    <div class="meta">
+        <span class="author">By Jane Doe</span> |
+        <span class="date">{{ now | format: "F j, Y" }}</span>
     </div>
-
-    {{ content }}
-        {{ partial src="sets/{type}" }}
-    {{ /content }}
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet ullamcorper leo, at scelerisque
+            nunc bibendum non. Nulla facilisi.</p>
+        <p>Integer quis justo malesuada, aliquam sapien eget, venenatis libero. Ut cursus convallis auctor.</p>
+        <img src="/path/to/article-image.jpg" alt="Article Image">
+        <p>Donec facilisis mollis odio nec ultricies. Proin vitae consequat elit, sit amet varius odio.</p>
+    </div>
 </div>
-
-{{ partial:partials/related_posts }}
+{{ /section:main_content }}

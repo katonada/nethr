@@ -1,0 +1,43 @@
+/* _article.scss */
+
+.article {
+  max-width: 800px;
+  margin: 2rem auto;
+  color: var(--primary-color);
+
+  .title {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: var(--font-size-large);
+  }
+
+  .meta {
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-size: var(--font-size-small);
+
+    .author {
+      font-weight: bold;
+    }
+
+    .date {
+      font-style: italic;
+    }
+  }
+
+  .content {
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem 0;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+/* _nav.scss */
+
+.nav {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
+  /* Responsive adjustments */
+  @media (width <= 768px) {
+    .nav-list {
+      flex-direction: column;
+    }
+
+    .subnav-list {
+      position: static;
+      display: none;
+    }
+
+    .nav-item:hover .subnav-list,
+    .nav-item:focus-within .subnav-list {
+      display: block;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-item {
+    position: relative;
+
+    &--active .nav-link {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    &:hover .subnav-list {
+      display: block;
+    }
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+
+  /* Subnavigation styles */
+  .subnav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    list-style: none;
+
+    .subnav-item {
+      margin: 0;
+
+      .subnav-link {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.25rem;
+        color: var(--text-color);
+        font-size: var(--font-size-small);
+        text-decoration: none;
+
+        &:hover {
+          background-color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}

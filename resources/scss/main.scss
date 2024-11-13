@@ -1,0 +1,23 @@
+/* main.scss */
+
+@use 'variables';
+@use 'category-styles';
+
+/* Import partials */
+@use 'partials/header';
+@use 'partials/nav';
+@use 'partials/footer';
+@use 'partials/sidebar';
+@use 'partials/breadcrumbs';
+@use 'partials/tags';
+
+/* Import components */
+@use 'components/card';
+@use 'components/button';
+@use 'components/gallery-slider';
+
+/* Import page styles */
+@use 'pages/home';
+@use 'pages/article';
+@use 'pages/gallery';
+@use 'pages/author';
