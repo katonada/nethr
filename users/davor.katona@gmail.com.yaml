@@ -1,3 +1,16 @@
 super: true
 id: a01c9975-9cb8-4efd-ac86-6d2920dbed36
 password_hash: $2y$12$wxGPsv2nwsMC/hec6A/EDuHXHdwK/f.I8Y4WukM0CyDyDFnwvcX3G
+preferences:
+  collections:
+    posts:
+      columns:
+        - title
+        - author
+        - slug
+        - date
+        - status
+      after_save: continue_editing
+  assets:
+    assets:
+      mode: grid

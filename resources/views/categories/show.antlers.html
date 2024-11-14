@@ -10,15 +10,7 @@
         <div class="article-item">
             <h2 class="article-title"><a href="{{ url }}">{{ title }}</a></h2>
             <p class="article-excerpt">
-                {{ if excerpt }}
-                {{ excerpt | truncate:150 }}
-                {{ else }}
-                {{ if bard_field is string }}
-                {{ bard_field | truncate:150 }}
-                {{ else }}
-                {{ bard_field[0].content[0].text | truncate:150 }}
-                {{ /if }}
-                {{ /if }}
+                {{ description | truncate:150 }}
             </p>
         </div>
         {{ /collection:posts }}
