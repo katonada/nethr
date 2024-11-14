@@ -8,7 +8,53 @@
         <span class="date">{{ date | format: "F j, Y" }}</span>
     </div>
     <div class="content">
-        {{ bard_field }} <!-- Display Bard content directly -->
+        {{ bard_field }}
+        {{ if type == "heading" }}
+        <h{{ level }}>{{ text }}</h{{ level }}>
+
+        {{ elseif type == "paragraph" }}
+        <p>{{ text }}</p>
+
+        {{ elseif type == "list" }}
+        {{ if list_type == "bullet" }}
+        <ul>
+            {{ items }}
+            <li>{{ text }}</li>
+            {{ /items }}
+        </ul>
+        {{ else }}
+        <ol>
+            {{ items }}
+            <li>{{ text }}</li>
+            {{ /items }}
+        </ol>
+        {{ /if }}
+
+        {{ elseif type == "blockquote" }}
+        <blockquote>{{ text }}</blockquote>
+
+        {{ elseif type == "code" }}
+        <pre><code>{{ content }}</code></pre>
+
+        {{ elseif type == "image" }}
+        <figure>
+            <img src="{{ url }}" alt="{{ alt }}" />
+            {{ if caption }}
+            <figcaption>{{ caption }}</figcaption>
+            {{ /if }}
+        </figure>
+
+        {{ elseif type == "set" }}
+        {{ if set == "your_custom_set" }}
+        <!-- Render your custom set -->
+        {{ /if }}
+
+        {{ else }}
+        <!-- Fallback for any other content types -->
+        {{ text }}
+        {{ /if }}
+        {{ /bard_field }}
+
     </div>
 </div>
 {{ /section:main_content }}

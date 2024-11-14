@@ -15,10 +15,43 @@ tabs:
           -
             handle: bard_field
             field:
-              smart_typography: true
-              remove_empty_nodes: false
+              remove_empty_nodes: trim
               type: bard
               display: 'Bard Field'
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - code
+                - codeblock
+              sortable: false
+              reading_time: true
+              word_count: true
+              allow_source: false
+              container: assets
+              always_show_set_button: true
+              sets:
+                add_image:
+                  display: 'Add image'
+                  icon: media-image-picture-orientation
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: assets_field
+                          field:
+                            mode: grid
+                            container: assets
+                            type: assets
+                            display: 'Assets Field'
           -
             handle: author
             field:
