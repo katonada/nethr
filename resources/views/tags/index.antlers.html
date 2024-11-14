@@ -1,0 +1,19 @@
+{{ extends layout="layouts.default" }}
+
+{{ section:main_content }}
+<div class="categories">
+    <h1 class="title">Categories</h1>
+    <p class="description">Explore articles by category</p>
+
+    <div class="category-list">
+        {{ taxonomy:categories }}
+        <div class="category-item">
+            <a href="{{ url }}">
+                <h2>{{ title }}</h2>
+                <p>{{ description ?? 'No description available' }}</p>
+            </a>
+        </div>
+        {{ /taxonomy:categories }}
+    </div>
+</div>
+{{ /section:main_content }}

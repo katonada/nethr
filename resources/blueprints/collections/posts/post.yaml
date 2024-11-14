@@ -60,3 +60,11 @@ tabs:
                 - categories
               display: Categories
               mode: select
+          -
+            handle: tags
+            field:
+              mode: select
+              taxonomies:
+                - tags
+              type: terms
+              display: Tags
