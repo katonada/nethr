@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import path from 'path';
+import vue2 from '@vitejs/plugin-vue2';
 
 export default defineConfig({
     plugins: [
@@ -12,6 +13,7 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+        vue2(),
     ],
     resolve: {
         alias: {
@@ -29,8 +31,8 @@ export default defineConfig({
         },
         postcss: {
             plugins: [
-                require('tailwindcss'),
-                require('autoprefixer'),
+                // require('tailwindcss'),
+                // require('autoprefixer'),
             ]
         }
     },

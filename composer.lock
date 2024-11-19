@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c69ef3fedb131fe319a95563b86e5b8a",
+    "content-hash": "de42ae90457300b4449ba82ae1a60d96",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -3954,6 +3954,46 @@
                 "source": "https://github.com/rhukster/dom-sanitizer/tree/1.0.7"
             },
             "time": "2023-11-06T16:46:48+00:00"
+        },
+        {
+            "name": "rtl/timepicker",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "addons/rtl/timepicker",
+                "reference": "b13d82aec3ae186cd9303f3dc53be8e9555de7ce"
+            },
+            "require": {
+                "statamic/cms": "^5.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Timepicker",
+                    "description": "Timepicker addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Rtl\\Timepicker\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rtl\\Timepicker\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Rtl\\Timepicker\\Tests\\": "tests"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "scrivo/highlight.php",
@@ -9968,7 +10008,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rtl/timepicker": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

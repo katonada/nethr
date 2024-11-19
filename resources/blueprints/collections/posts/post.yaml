@@ -19,6 +19,11 @@ tabs:
               type: textarea
               display: Description
           -
+            handle: timepicker_field
+            field:
+              type: timepicker
+              display: 'Timepicker Field'
+          -
             handle: bard_field
             field:
               remove_empty_nodes: trim

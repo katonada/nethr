@@ -12,3 +12,8 @@ Statamic.booting(() => {
 });
 
 */
+import Timepicker from './components/fieldtypes/Timepicker.vue';
+
+Statamic.booting(() => {
+    Statamic.$components.register('timepicker-fieldtype', Timepicker);
+});

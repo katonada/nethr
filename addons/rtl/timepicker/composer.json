@@ -1,0 +1,37 @@
+{
+    "name": "rtl/timepicker",
+    "autoload": {
+        "psr-4": {
+            "Rtl\\Timepicker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rtl\\Timepicker\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Timepicker",
+            "description": "Timepicker addon"
+        },
+        "laravel": {
+            "providers": [
+                "Rtl\\Timepicker\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
