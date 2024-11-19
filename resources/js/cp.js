@@ -1,9 +1,8 @@
 Statamic.booting(() => {
     console.log('Statamic CP booting...');
 
-    // Inject the Bulk Edit button into the toolbar
     const interval = setInterval(() => {
-        const toolbar = document.querySelector('.data-list-bulk-actions'); // Correct toolbar selector
+        const toolbar = document.querySelector('.data-list-bulk-actions'); // Toolbar selector
         if (toolbar) {
             clearInterval(interval); // Stop checking once the toolbar is found
 
@@ -14,8 +13,10 @@ Statamic.booting(() => {
             button.onclick = () => {
                 // Gather selected assets
                 const selectedAssets = Array.from(
-                    document.querySelectorAll('[data-selected="true"]') // Replace with actual selector for selected assets
-                ).map((asset) => asset.getAttribute('data-path')); // Adjust if needed for the asset's path
+                    document.querySelectorAll('tr.sortable-row input[type="checkbox"]:checked') // Updated selector for checked rows
+                ).map((checkbox) => checkbox.value); // Get the value from the checkbox
+
+                console.log('Selected Assets:', selectedAssets); // Debug selected assets
 
                 if (selectedAssets.length === 0) {
                     alert('No assets selected!');
