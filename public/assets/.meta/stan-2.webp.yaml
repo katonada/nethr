@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: Stan2
+  description: 'Ovo je plavi stan'
 size: 88346
-last_modified: 1731576943
+last_modified: 1731669792
 width: 1280
 height: 853
 mime_type: image/webp
